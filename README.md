@@ -13,3 +13,6 @@ Lothar Collatz proposed that all integral seed numbers would eventually fall int
 The original purpose of this project had been to run various experiments regarding the Collatz Conjecture (eg. Running intervals of seed numbers
 to get their respective iterations, creating graphical representations for various seed number intervals to observe any patterns, etc)
 
+About the Conjecture:
+Veritasium Video: https://www.youtube.com/watch?v=094y1Z2wpJg&t=1138s
+Wikipedia: https://en.wikipedia.org/wiki/Collatz_conjecture
