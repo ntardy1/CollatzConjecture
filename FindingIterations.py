@@ -7,6 +7,8 @@ import numpy
 import math
 
 # Opening the text file that will show all the calculated data
+# The file "iterationsFile.txt" must already exist for this to work
+# The file path is, of course, dependent on the computer as well as the user. This path will only work for my computer/account
 iterationsFile = open("C:\\Users\laten\Desktop\Projects\CollatzConjecture\iterationsFile.txt", "w")
 
 # Function for finding the iterations of either a single seed number
