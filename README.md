@@ -1,7 +1,7 @@
 # CollatzConjecture
 All code and files relevant to experiments involving the Collatz Conjecture (3n + 1)
 
-The Collatz Conjecture is a famous mathematical problem/challenge that is named after the German Mathematician Lothar Collatz,
+The Collatz Conjecture is a famous mathematical problem/challenge that is named after the German mathematician Lothar Collatz,
 who proposed the idea in 1937.
 It involves the idea of starting with some integral seed number, (eg. 1, 5, 23, etc).
 If the seed number is odd, you multiply it by 3 and then add 1. (5 -> (3(5) + 1 -> 16)
