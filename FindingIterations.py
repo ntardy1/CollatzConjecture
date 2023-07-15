@@ -5,16 +5,16 @@
 # Importing libraries
 import numpy
 import math
+import os
 
 # Opening the text file that will show all the calculated data
 # The file "iterationsFile.txt" must already exist for this to work
 # The file path is, of course, dependent on the computer as well as the user. This path will only work for my computer/account
-iterationsFile = open("C:\\Users\laten\Desktop\Projects\CollatzConjecture\iterationsFile.txt", "w")
+iterationsFile = open("iterationsFile.txt", "w")
 
 # Function for finding the iterations of either a single seed number
 # or an interval of seed numbers
 def findingIterations(seedNumbersList, decision):
-    Index = 0
     iterations = 0
     iterationsList = []
     # The portion of the function that applies to a single seed number
@@ -22,8 +22,7 @@ def findingIterations(seedNumbersList, decision):
         number = seedNumbersList
         while (number >= 1):
             if (number == 1):
-                iterationsList.append(iterations)
-                return iterationsList
+                return iterations
             elif (math.remainder(number, 2) == 0):
                 number = number/2
                 iterations += 1  
@@ -52,19 +51,22 @@ def findingIterations(seedNumbersList, decision):
                 elif ((number > 1) and (number % 2 != 0)):
                         number = (3*number + 1)
                         iterations += 1
-    return iterationsList
+            return iterationsList
+
+# Clearing the screen
+os.system('cls')
 
 # Determining whether a single seed or an interval is being tested
-decision = int(input("Single seed (1) or interval (2): "))
+print("1: Single Seed Number \n2: Seed Interval")
+decision = int(input("Choice: "))
 if decision == 1:
     # Getting seed number
-    seedNumbersList = int(input("Input seed number: ")) 
+    seedNumber = int(input("Input seed number: ")) 
     # Calling function that finds the number of iterations for a given seed number
     # Setting the output of the function to the iterations  
-    iterationsList = findingIterations(seedNumbersList, decision)
+    iterations = findingIterations(seedNumber, decision)
     # Printing output info
-    print(f"Seed Number: {seedNumbersList}")
-    print(f"Iterations: {iterationsList}")
+    print(f"Iterations: {iterations}")
 elif decision == 2:
     # Getting lower and upper bounds for the interval of seed numbers
     lowerBound = int(input("Input lower bound: "))
